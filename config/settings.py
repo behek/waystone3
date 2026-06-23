@@ -40,5 +40,5 @@ SOURCES = {
     "meta":       {"type": "asn_file", "file": "meta.txt"},
     "google":     {"type": "asn_file", "file": "google.txt"},
     "rkn":        {"type": "url",     "url": RKN_URL},
-    "ru_gov":     {"type": "netname", "url": RU_GOV_URL},
+    "ru_gov":     {"type": "netname_file", "file": "/home/mcp/blacklists/AS_Network_List/lists/ru-gov-netnames.txt"},
 }

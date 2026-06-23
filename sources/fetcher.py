@@ -56,4 +56,40 @@ def fetch_list(name, cfg):
     if t == 'asn_file': return fetch_from_asn_file(name, cfg['file'])
     if t == 'url':      return fetch_rkn(cfg['url'])
     if t == 'netname':  return fetch_ru_gov(cfg['url'])
+    if t == 'netname_file': return fetch_ru_gov_local(cfg['file'])
     raise ValueError(f'Unknown type: {t}')
+
+
+def fetch_ru_gov_local(filepath):
+    """
+    Читает локальный файл с netnames, ищет префиксы через RIPE REST API.
+    Не использует whois порт 43.
+    """
+    import re
+    netnames = []
+    with open(filepath) as f:
+        for line in f:
+            line = line.strip()
+            if line.startswith('netname:'):
+                netnames.append(line.split(':', 1)[1].strip())
+
+    print(f'  [ru_gov] {len(netnames)} netnames found', file=sys.stderr)
+    prefixes = set()
+    for netname in netnames:
+        try:
+            url = f'https://rest.db.ripe.net/search.json?query-string={netname}&type-filter=route&flags=no-referenced'
+            r = requests.get(url, timeout=15, headers={'Accept': 'application/json'})
+            if r.status_code != 200:
+                continue
+            data = r.json()
+            objects = data.get('objects', {}).get('object', [])
+            for obj in objects:
+                for attr in obj.get('attributes', {}).get('attribute', []):
+                    if attr.get('name') == 'route':
+                        p = attr.get('value', '').strip()
+                        if _is_ipv4(p):
+                            prefixes.add(p)
+        except Exception as e:
+            print(f'  [ru_gov] {netname}: {e}', file=sys.stderr)
+
+    return prefixes
