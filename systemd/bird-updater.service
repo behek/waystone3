@@ -1,0 +1,17 @@
+[Unit]
+Description=Bird Prefix Updater
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=mcp
+WorkingDirectory=/home/mcp/bird-updater
+EnvironmentFile=/home/mcp/bird-updater/systemd/bird-updater.env
+ExecStart=/usr/bin/python3 updater.py
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=bird-updater
+
+[Install]
+WantedBy=multi-user.target

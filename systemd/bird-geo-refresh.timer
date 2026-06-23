@@ -1,0 +1,10 @@
+[Unit]
+Description=Bird GeoIP Refresh — monthly
+Requires=bird-geo-refresh.service
+
+[Timer]
+OnCalendar=*-*-01 03:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
