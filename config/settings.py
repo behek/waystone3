@@ -25,7 +25,6 @@ RU_GOV_URL = "https://raw.githubusercontent.com/C24Be/AS_Network_List/main/lists
 
 SOURCES = {
     "telegram":   {"type": "asn_file", "file": "telegram.txt"},
-    "whatsapp":   {"type": "asn_file", "file": "whatsapp.txt"},
     "vmware":     {"type": "asn_file", "file": "vmware.txt"},
     "intel":      {"type": "asn_file", "file": "intel.txt"},
     "chatgpt":    {"type": "asn_file", "file": "chatgpt.txt"},
