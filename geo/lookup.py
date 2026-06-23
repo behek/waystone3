@@ -1,5 +1,5 @@
 import ipaddress, sys
-import requests
+
 try:
     import geoip2.database
     _reader = None
@@ -27,10 +27,13 @@ _A2N = {
 
 def _reader_get():
     global _reader
-    if geoip2 is None: return None
+    if geoip2 is None:
+        return None
     if _reader is None:
-        try: _reader = geoip2.database.Reader(MMDB_PATH)
-        except Exception as e: print(f'[geo] mmdb: {e}', file=sys.stderr)
+        try:
+            _reader = geoip2.database.Reader(MMDB_PATH)
+        except Exception as e:
+            print(f'[geo] mmdb error: {e}', file=sys.stderr)
     return _reader
 
 
@@ -38,35 +41,12 @@ def _host(prefix):
     return str(ipaddress.ip_network(prefix, strict=False).network_address)
 
 
-def lookup_whois(prefix):
-    try:
-        r = requests.get(
-            f'https://stat.ripe.net/data/prefix-overview/data.json?resource={prefix}',
-            timeout=15)
-        r.raise_for_status()
-        c = r.json().get('data', {}).get('block', {}).get('country')
-        if not c:
-            r2 = requests.get(
-                f'https://stat.ripe.net/data/geoloc/data.json?resource={_host(prefix)}',
-                timeout=15)
-            r2.raise_for_status()
-            locs = r2.json().get('data', {}).get('locations', [])
-            if locs: c = locs[0].get('country')
-        if c: return _A2N.get(c.upper().strip())
-    except Exception as e:
-        print(f'[geo/whois] {prefix}: {e}', file=sys.stderr)
-    return None
-
-
-def lookup_geoip(prefix):
+def get_country_numeric(prefix):
     rd = _reader_get()
-    if not rd: return None
+    if not rd:
+        return None
     try:
         rec = rd.country(_host(prefix))
         return _A2N.get((rec.country.iso_code or '').upper())
     except Exception:
         return None
-
-
-def get_country_numeric(prefix):
-    return lookup_whois(prefix) or lookup_geoip(prefix)

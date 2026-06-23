@@ -61,8 +61,8 @@ def update_list(name, dry_run=False):
     return True
 
 
-def _enrich_new(batch=200):
-    rows = get_prefixes_without_geo(limit=batch)
+def _enrich_new(batch=0):
+    rows = get_prefixes_without_geo(limit=batch if batch > 0 else 999999)
     if not rows: return
     print(f'[geo] enriching {len(rows)} new prefixes')
     ok = 0
@@ -75,7 +75,7 @@ def _enrich_new(batch=200):
 
 
 def geo_refresh_all():
-    rows = get_prefixes_for_geo_refresh(5000)
+    rows = get_prefixes_for_geo_refresh(50000)
     print(f'[geo] refresh: {len(rows)}')
     ok = fail = 0
     for r in rows:

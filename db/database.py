@@ -68,9 +68,10 @@ def upsert_prefixes(list_id, new_prefixes):
                         "INSERT INTO bl_prefix_lists (prefix_id,list_id) VALUES (%s,%s) ON CONFLICT DO NOTHING",
                         (pid, list_id))
                 if to_remove:
-                    psycopg2.extras.execute_values(cur,
-                        "DELETE FROM bl_prefix_lists WHERE prefix_id=%s AND list_id=%s",
-                        [(current[p], list_id) for p in to_remove])
+                    for p in to_remove:
+                        cur.execute(
+                            "DELETE FROM bl_prefix_lists WHERE prefix_id=%s AND list_id=%s",
+                            (current[p], list_id))
                 return {"total": len(new_prefixes), "added": len(to_add), "removed": len(to_remove)}
     finally:
         conn.close()
