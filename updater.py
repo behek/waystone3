@@ -10,7 +10,7 @@ from db.database import (
 )
 from sources.fetcher import fetch_list
 from geo.lookup import get_country_numeric
-from bird.generator import write_list_conf, birdc_configure
+from bird.generator import write_list_conf, write_combined_conf, birdc_configure
 from notify.telegram import (
     send_update_stats, send_error, send_geo_refresh_done,
     send_bird_reload_ok, send_bird_reload_fail,
@@ -55,7 +55,7 @@ def update_list(name, dry_run=False):
     send_update_stats(label, stats['total'], stats['added'], stats['removed'])
     _enrich_new()
     try:
-        write_list_conf(name, label, comm)
+        write_combined_conf()
     except Exception as e:
         print(f'[bird] {e}', file=sys.stderr)
     return True
@@ -110,10 +110,7 @@ def main():
     if a.geo_refresh:
         geo_refresh_all(); return
     if a.regen_bird:
-        with cursor() as cur:
-            cur.execute('SELECT name,label,community FROM bl_lists WHERE enabled=TRUE ORDER BY name')
-            for r in cur.fetchall():
-                write_list_conf(r['name'], r['label'], r['community'])
+        write_combined_conf()
         if birdc_configure(): send_bird_reload_ok()
         else:                 send_bird_reload_fail()
         return

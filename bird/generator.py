@@ -59,3 +59,38 @@ def birdc_configure():
     except Exception as e:
         print(f'[bird] error: {e}', file=sys.stderr)
         return False
+
+
+def generate_combined_conf():
+    from db.database import get_all_prefixes_with_lists
+    rows = get_all_prefixes_with_lists()
+    ts = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    lines = [
+        f'# Auto-generated: {ts} | combined all lists',
+        f'# Total prefixes: {len(rows)}',
+        'protocol static {',
+        '    ipv4;',
+        '',
+    ]
+    for row in rows:
+        comms = [(COMMUNITY_VENDOR, vc) for vc in row['vendor_communities']]
+        if row['country_iso']:
+            comms.append((COMMUNITY_COUNTRY, row['country_iso']))
+        if not comms:
+            continue
+        adds = '; '.join(f'bgp_community.add(({a}, {v}))' for a, v in comms)
+        names = ', '.join(row['list_names'])
+        lines.append(f'    route {row["prefix"]} reject {{ {adds}; }}; # {names}')
+    lines.append('}')
+    return '\n'.join(lines) + '\n'
+
+
+def write_combined_conf():
+    fp = os.path.join(BIRD_PROTOCOLS, 'static_combined.conf')
+    _backup(fp)
+    content = generate_combined_conf()
+    with open(fp, 'w') as f:
+        f.write(content)
+    prefix_count = content.count('\n    route ')
+    print(f'[bird] written {fp} ({prefix_count} routes)')
+    return fp

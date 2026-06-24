@@ -149,3 +149,21 @@ def mark_list_ok(list_id):
 def mark_list_run(list_id):
     with cursor() as cur:
         cur.execute("UPDATE bl_lists SET last_run_at=NOW() WHERE id=%s", (list_id,))
+
+
+def get_all_prefixes_with_lists() -> list:
+    """Все префиксы с community и именами списков для генерации общего конфига."""
+    with cursor() as cur:
+        cur.execute("""
+            SELECT
+                p.prefix::text,
+                p.country_iso,
+                array_agg(DISTINCT l.community ORDER BY l.community) AS vendor_communities,
+                array_agg(DISTINCT l.name ORDER BY l.name) AS list_names
+            FROM bl_prefixes p
+            JOIN bl_prefix_lists pl ON pl.prefix_id = p.id
+            JOIN bl_lists l ON l.id = pl.list_id AND l.enabled = TRUE
+            GROUP BY p.prefix, p.country_iso
+            ORDER BY p.prefix
+        """)
+        return list(cur.fetchall())
