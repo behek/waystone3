@@ -1,0 +1,13 @@
+[Unit]
+Description=Bird GeoIP Monthly Refresh
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=mcp
+WorkingDirectory=/home/mcp/bird-updater
+EnvironmentFile=/home/mcp/bird-updater/systemd/bird-updater.env
+ExecStart=/usr/bin/python3 updater.py --geo-refresh
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=bird-geo-refresh

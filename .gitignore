@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.bak
+systemd/bird-updater.env
+*.mmdb
