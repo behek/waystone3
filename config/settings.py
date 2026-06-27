@@ -14,7 +14,6 @@ TG_TOKEN = os.getenv("TG_TOKEN", "")
 TG_CHAT  = os.getenv("TG_CHAT",  "")
 
 LISTS_DIR       = os.getenv("LISTS_DIR",       os.path.join(_BASE_DIR, "lists"))
-BLACKLISTS_DIR  = os.getenv("BLACKLISTS_DIR",  "/home/mcp/blacklists/AS_Network_List")
 BIRD_PROTOCOLS  = os.getenv("BIRD_PROTOCOLS",  "/etc/bird/protocols")
 BIRD_BACKUP_DIR = os.getenv("BIRD_BACKUP_DIR", "/etc/bird/backups")
 MMDB_PATH       = os.getenv("MMDB_PATH",       "/home/mcp/dbip-country.mmdb")

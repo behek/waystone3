@@ -1,6 +1,8 @@
 import os, re, subprocess, sys
 import requests
-from config.settings import LISTS_DIR, BLACKLISTS_DIR, RKN_URL, RU_GOV_URL
+from config.settings import LISTS_DIR, RKN_URL, RU_GOV_URL
+
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 AS_RE   = re.compile(r'\bAS\d+\b', re.IGNORECASE)
 CIDR_RE = re.compile(r'^\d{1,3}(?:\.\d{1,3}){3}/\d{1,2}$')
@@ -29,7 +31,7 @@ def fetch_from_asn_file(name, filename):
         if m:
             asn = m.group(0).upper()
             try:
-                out = _run([sys.executable, 'network_list_from_as.py', '-q', asn], BLACKLISTS_DIR)
+                out = _run([sys.executable, 'network_list_from_as.py', '-q', asn], _PROJECT_ROOT)
                 prefixes.update(p.strip() for p in out.splitlines() if _is_ipv4(p.strip()))
             except Exception as e:
                 print(f'  [warn] {asn}: {e}', file=sys.stderr)
@@ -46,7 +48,7 @@ def fetch_rkn(url=RKN_URL):
 
 
 def fetch_ru_gov(url=RU_GOV_URL):
-    out = _run([sys.executable, 'network_list_from_netname.py', url], BLACKLISTS_DIR, timeout=300)
+    out = _run([sys.executable, 'network_list_from_netname.py', url], _PROJECT_ROOT, timeout=300)
     return {l.strip() for l in out.splitlines()
             if l.strip() and not l.startswith('#') and _is_ipv4(l.strip())}
 
