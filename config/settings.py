@@ -39,8 +39,8 @@ SOURCES = {
     "yandex":     {"type": "asn_file", "file": "yandex.txt"},
     "meta":       {"type": "asn_file", "file": "meta.txt"},
     "google":     {"type": "asn_file", "file": "google.txt"},
-    "vk":    {"type": "asn_file", "file": "vk.txt"},
-    "vodafone":    {"type": "asn_file", "file": "vodafone.txt"},
+    "vk":         {"type": "asn_file", "file": "vk.txt"},
+    "vodafone":   {"type": "asn_file", "file": "vodafone.txt"},
     "rkn":        {"type": "url",     "url": RKN_URL},
     "ru_gov":     {"type": "netname_file", "file": "/home/mcp/blacklists/AS_Network_List/lists/ru-gov-netnames.txt"},
 }
