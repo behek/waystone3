@@ -1,0 +1,980 @@
+#
+# The file has gotten from https://github.com/AntiZapret/antizapret/blob/master/blacklist4.txt
+#
+###############################################################################
+## Бо́льшая часть сетей, перечисленных ниже получена от самих "чиновничьих"   ##
+## организаций через стандартные средства построения маршрутизации, поэтому  ##
+## некоторые могут иметь не столь очевидные признаки "причастности"          ##
+###############################################################################
+
+# name: РосКомНадзор
+netname: Roskomnadzor-net
+# descr: Client of JSC Rostelecom
+# origin: AS12389
+
+# name: НТЦ Информрегистр
+netname: COMCOR-FGUPNTCInformregistr
+# descr: Network for FGUP NTC "Informregistr"
+# origin: AS8732
+
+# name: ФСКН, fskn.gov.ru
+netname: SPEZSVYAZ
+# descr: SPEZSVYAZ Internal network
+# origin: AS31430
+
+# name: rkn.gov.ru rsoc.ru
+netname: RU-RTCOMM-20001220
+# descr: OJSC RTComm.RU
+# origin: AS8342
+
+# name: 398-fz.rkn.gov.ru 97-fz.rkn.gov.ru eais.rkn.gov.ru nap.rkn.gov.ru
+netname: MMT
+# descr: MMT NPROD CMS 11-27194
+# origin: AS12389
+
+# name: Федеральная Налоговая Служба (ФНС) nalog.ru
+netname: RTCOMM-GNIVC
+# descr: Chief Scientific - Research Computing Center of the Federal
+# Tax Service of Russia
+# descr: FGUP GNIVC FNS Russia
+# origin: AS8342
+
+# name: Предположительно освобождённая сеть (FIXME!)
+netname: WELL-COM-NET
+# descr: WelL-COM ltd.
+# origin: AS3267
+
+# name: Предположительно освобождённая сеть (FIXME!)
+netname: NTKLtd-NET
+# descr: Nezavisimaya telekommunikacionnaya kompaniya Ltd.
+# origin: AS56477
+
+# name: Гознак
+netname: GOZNAK-AS
+# descr: FGUP Goznak
+# descr: Goznak Network for Public Service
+# descr: Maintains all Goznak objects.
+# origin: AS56725
+
+# name: Следственый комитет (СК РФ)
+netname: RU-WEST-CALL-20080227
+# descr: The Investigative Committee
+# descr: at the Prosecutor's Office of
+# descr: the Russian Federation
+# descr: Tekhnicheskiy per., 2
+# descr: Moscow, Russia
+# descr: WestCall Ltd
+# origin: AS8595
+
+# name: sledcom.ru
+netname: RSNET
+# descr: RUSSIAN STATE INTERNET NETWORK
+# descr: Federal Guard Service of the Russian Federation
+# origin: AS43797
+
+# name: Железногорский ГХК, старая подсеть СК РФ
+netname: RU-ATOMLINK-20081107
+# descr: OOO "Telecom GKhK"
+# descr: ATOMLINK-AS
+# origin: AS48302
+
+# name: Федеральная Служба Охраны (ФСО)
+netname: RU-FGS-20090305
+# descr: The Federal Guard Service of the Russian Federation
+# origin: AS8291
+
+# name: Электронное правительство (+ "Спутник")
+netname: Electronic-government
+# descr: OJSC Rostelecom
+# descr: Electronic government of the Russian Federation
+
+# name: Московская Городская Радио-частотная сеть (РСВО)
+netname: RU-MSRN-20100701
+# descr: Federal State Unitary Enterprise of the Order of the Red Banner of Labour "Russian Broad-casting and Notification Network"
+# descr: Moscow City Radio Broadcasting Network
+# origin: AS197150
+
+# name: Гос. радио-частотный Центр (ГРЧЦ)
+netname: GRFC-NET
+# descr: Federal Unitary State Enterprise General Radio Freqency Centre
+# origin: AS196641
+
+# name: RSNet (Основная сеть для Гос.органов)
+netname: RSNET
+# descr: RUSSIAN STATE INTERNET NETWORK
+# descr: Main Division of Informations Resources
+# descr: for States organs of the Russian Federation
+# origin: AS8291
+# origin: AS42121
+
+# name: НТЦ "Атлас" (НИЦИ при МИД)
+netname: SRCI-MID-RF-NET
+# descr: Research Centre for Computer Science at the Russian Foreign Ministry
+# origin: AS57580
+
+# name: НТЦ "Атлас" (ЦентрИнформ)
+netname: ATLAS-NW-NET
+# descr: Federal State Unitary Enterprise CenterInform
+# descr: ATLAS-NW-NET
+# origin: AS29450
+
+# name: НТЦ "Атлас"
+netname: ATLAS-NET
+# descr: FGUP NTC ATLAS
+# origin: AS51665
+
+# name: НТЦ "Атлас" (Новосибирский филиал)
+netname: ATLASNSK
+# descr: Novosibirsk department of Atlas ISP
+# origin: AS43208
+
+# name: Московская прокуратура (mosproc.ru)
+netname: RU-ROPNET-990301
+# descr: RopNet
+# descr: RopNet-Block1
+# origin: AS12314
+# (?) Раз есть RopNet-Block1, должны быть и ropnet-blockN
+
+# name: Федеральная Служба Безопасности (ФСБ)
+netname: RT-CLNT-FSB-RF
+# descr: Federal Security Service of Russian Federation
+# origin: AS8342
+
+# name: Министерство образования (МинОбрНауки)
+netname: SRISI
+# descr: Network Federal agency on education
+# descr: 51, st. Lusinovskaya, Moscow, 115998, Russia
+# descr: Network Federal agency on education
+# origin: AS3267
+
+
+# name: ГосНИИАС
+netname: GOSNIIAS-NET
+# descr: Federal state unitary enterprise 'State Research Institute of Aviation Systems'
+# origin: AS197553
+
+# name: НИИГА
+netname: NCPLG-NET
+# descr: Federal State Unitary Enterprise "State
+# descr: Scientific Network
+# descr: Federal State Unitary Enterprise
+# descr: "State Scientific-research Institute
+# descr: of the Civil Aviation (Scientific Center
+# descr: for maintenance of the flying fitness of airships)"
+# descr: SC MFFA (NCPLG VS)
+# descr: Scientific Network
+# origin: AS33888
+
+# name: ВЭИ
+netname: vei
+# descr: Federal State Unity Enterprise
+# descr: All-Russian Electrotechnical Institute of V.I. Lenin
+# origin: AS51039
+
+# name: ВНИИгеосистем
+netname: VNIIGEOSYSTEM-NET
+# descr: State Science Centre VNIIGeosystem
+# origin: AS58279
+
+###############################################################################
+
+
+
+################################## !!!!!! ###################################
+###############################################################################
+## Все подсети, перечисленные ниже этой заметки не являются "принадлежащими" ##
+## гос. структурам в строгом смысле. И, вдобавок, получены "контибьюторами" ##
+## whitelist4_local.txt ##
+###############################################################################
+################################## !!!!!! ###################################
+
+# name: Свердловская областная дума
+# descr: Oblastnaya Duma Zakonodatel"nogo Sobraniya Sverdlovskoj oblasti
+# descr: Ekaterinburg, Russia
+
+# name: Объединенная редакция МВД
+# descr: Network for Objedinennaya redakciya MVD Rossii
+
+# name: Екатеринбургская дума
+# descr: Gorodskaya Duma
+# descr: Ekaterinburg, Russia
+
+# name: Вологодский ФСКН
+netname: FSKN-Vologda
+# descr: Ticket 10-09407-2, SZF
+
+# name: Министерство связи
+# descr: Executive office of Ministry of press,
+# descr: broadcasting and mass communication
+
+# name: Кемеровское казначейство
+netname: UFK-KMR-NET
+# descr: Territorial branch of Federal Treasury in Kemerovo region
+
+# name: Алтайская ФНС
+# descr: Ministry of Taxation of Altai territory
+# descr: Upravlenie Ministerstva RF po nalogam i sboram po altaiskomu kraiu
+
+# name: Волгоградская ФНС
+# descr: Ministry of Taxation, subsidiary of Volgagrad region
+# descr: Lenina st., 90
+# descr: Volgagrad, Russia
+
+# name: Башкирская ФНС
+# descr: Ministry of Taxation, subsidiary of Bashkortostan region
+# descr: 1b, Vladivostokskaya st.,
+# descr: Ufa, Republic Bashkortostan
+
+# name: Южно-Сахалинский ФСКН
+# descr: 693000 Russia Yujno-Sahalynsk, ZC-7536978
+# descr: Sahalinskaya, 4A, KL-3495808
+
+# name: Чувашская ФНС
+netname: RU-CHUVASHIA-NALOG
+# descr: The Ministry of Taxation of the Russian Federation in Chuvashia.
+# descr: Russia, Cheboksary
+# descr: Bazarnaya, 40
+
+# name: Московская областная дума
+netname: MosOblDuma-NET
+# descr: MosOblDuma
+# descr: GLOBUS-ROUTE-19
+
+# name: Черкесская ФНС
+netname: UMNS-CHERKESSK
+# descr: Ministry of Taxation, subsidiary of Cherkessk region
+# descr: Cherkessk, Krasnoarmeiskaya st., 70
+
+# name: Московская городская дума
+# descr: Moscow City Government and Moscow City Duma network
+
+# name: Тамбовская дума
+netname: TAMBOVOBLDUMA-NET
+# descr: (VR000128) tambov-duma,
+# descr: Tambov, Russia
+# descr: RU-TRANS-TELECOM
+
+# name: Саратовская ФНС
+netname: UMNS-SARATOV
+# descr: Ministry of Taxation, subsidiary of Saratov region
+# descr: 24, Rabochaya st.,
+# descr: Saratov, 410028
+# descr: RTCOMM-RU
+
+# name: МЧС по Саратовской области
+netname: MCHS-Saratov
+# descr: MCHS Rossii po Saratovskoj oblasti
+# descr: Sobornaya sq.,7. Saratov, Russia
+# descr: RU-VTT-0 (Saratov Part-I)
+
+# name: Министерство юстиции
+netname: SCLI-NET-MinJust
+# descr: JSC Rostelecom Client (MinJust R&D center)
+# descr: ROSTELECOM NETS
+
+# name: Калининградская областная дума
+netname: KALININGRADSKAYA-OBLASTNAYA-DUMA-LAN
+# descr: Kirova ul. d.17
+# descr: Kaliningrad
+# descr: JSC PeterStar
+# descr: PeterStar at Kaliningrad
+
+# name: Рублево-Успенский ЛОК
+netname: RULOK-net
+# descr: FGUP "Rublevo-Uspenskiy LOK"
+# descr: Route for FGUP "Rublevo-Uspenskiy LOK"
+
+# name: Медцентр МЧС
+netname: MCHS
+# descr: Medical Center MCHS
+# descr: SPB-TELEPORT
+
+# name: Псковская ФНС
+netname: UMNS-PSKOV
+# descr: Ministry of Taxation, subsidiary of Pskov region
+# descr: RTCOMM-RU
+
+# name: Вологодская ФНС
+netname: UMNS-VOLOGDA
+# descr: Ministry of Taxation, subsidiary of Vologda region
+# descr: UMNS35
+# descr: Vologda, Russia
+# descr: RTCOMM-RU
+
+# name: ФСКН по Амурской области
+netname: FSKN_po_Amurskoj_oblasti
+# descr: Ticket 10-21141-1
+# descr: ROSTELECOM NETS
+
+# name: Пермская дума
+netname: PERMGORDUMA-NET
+# descr: Perm Duma network, Russia
+# descr: 31, Zakamskaya str., Perm
+# descr: for Perm department
+
+# name: Владивостокский МЧС
+netname: POL-MCHS-NET
+# descr: MChS
+# descr: 31 Dalzavodskaya st., Vladivostok, Russia
+# descr: 7 4232 222089
+# descr: PRIMORYE NET
+
+# name: Спецсвязь ФСО РФ
+netname: SPEZSVYAZ
+# descr: SPEZSVYAZ Internal network
+
+# name: Зеленоградское УИ МЧС
+netname: COMCOR-UIMChSpoMoskveZelenograd
+# descr: Network for UI MChS po Moskve Zelenograd
+# descr: comcor.ru
+
+# name: Приморский ФСКН
+netname: Upravlenie_FSKN_Rossii_po_PK
+# descr: Ticket 10-03557
+# descr: ROSTELECOM NETS
+
+# name: Нижегородская ФНС
+netname: NALOG-NET
+# descr: The Ministry of Taxation of the Russian Federation
+# descr: in Nizhny Novgorod Region
+# descr: About abuse activity please
+# descr: e-mail to abuse@mts-nn.ru
+# descr: OJSC VolgaTelecom Autonomous System
+
+# name: Московское УИ МЧС (Ибрагимова)
+netname: COMCOR-UpravlInformMChSpoMSKIbragimova
+# descr: Network for Upravlenie informatizacii MChS po Moskve Ibragimova
+# descr: comcor.ru
+
+# name: Московское УИ МЧС (Реутовская)
+netname: COMCOR-UIMChSpoMoskveReutovskaya
+# descr: Network for UI MChS po Moskve Reutovskaya
+# descr: comcor.ru
+
+# name: Московское УИ МЧС (Нелидовская)
+netname: COMCOR-UpravlenieinformatizaciiMChSpoMoskveNelidovskaya
+# descr: Network for Upravlenie informatizacii MChS po Moskve Nelidovskaya
+# descr: comcor.ru
+
+# name: Московское УИ МЧС (Твардовского, 16)
+netname: COMCOR-UIMChSpogMoskvetvardovskogo16
+# descr: Network for UI MChS po g Moskve tvardovskogo 16
+# descr: comcor.ru
+
+# name: Московское УИ МЧС (Факельный)
+netname: COMCOR-UpravlenieinformatizaciidlyaMChSpoMoskveFakeljnyy
+# descr: Network for Upravlenie informatizacii dlya MChS po Moskve Fakeljnyy
+# descr: comcor.ru
+
+# name: ЦИК
+netname: RSNET
+# descr: RUSSIAN STATE INTERNET NETWORK
+# descr: Main Division of Informations Resources
+# descr: for States organs of the Russian Federation
+# descr: for Central Election Committee (CEC)
+
+# name: ФСКН
+netname: RU_FSKN
+# descr: Ticket 10-05505-3
+# descr: ROSTELECOM NETS
+
+# name: МИД
+netname: MFA-RU2
+# descr: Ministry of Foreign Affairs of Russia(MOFA)
+# descr: Moscow, Russia
+# descr: COMBELNET
+# descr: Combellga
+# descr: Mitnaya ul 3, Entrance 2, 14th floor
+# descr: 117049 Moscow
+# descr: Russia
+
+# name: Новгородская ФНС
+netname: UMNS-NOVGOROD
+# descr: Ministry of Taxation, subsidiary of Novgorod region
+# descr: RTCOMM-RU
+
+# name: Ростовская ФНС
+netname: UMNS-ROSTOV
+# descr: Ministry of Taxation of Rostov region
+# descr: RTCOMM-RU
+
+# name: ФОМС
+netname: FOMS
+# descr: Federal Compulsory Health Insurance Fund
+# descr: FOMS
+
+# name: Татарстанская ФНС
+netname: UMNS-KAZAN
+# descr: Ministry of Taxation of Tatarstan Republic
+# descr: 420094, Kazan, 3, Bondarenko's str
+# descr: RTCOMM-RU
+
+# name: Пермская ФНС
+netname: UMNS-PERM
+# descr: Ministry of Taxation, subsidiary of Perm region
+# descr: 614600, Perm, 46, Okulova str
+# descr: RTCOMM-RU
+
+# name: Смоленская дума
+netname: Smolensk-Duma
+# descr: JSC Rostelecom Client (city Smolensk)
+# descr: ROSTELECOM NETS
+netname: SMOLTELECOM-DUMA-NET
+# descr: Smoltelecom customer: Smolensk regional DUMA
+# descr: RU-SMOLTELECOM-NET
+
+# name: Росатом
+netname: ROSATOM-INET-INTERNAL-USERS-1
+# descr: Rosatom outside-zone (internet users, internal, building #1)
+# descr: SCC ROSATOM
+
+# name: ЦТСПИ при МИД
+netname: RU-CTSPI-20050201
+# descr: CTSPI Company
+# descr: CTSPI Company Moscow Region Network
+# descr: Moscow, Russia
+
+# name: Томская ФНС
+netname: UMNS-TSK
+# descr: Ministry of Taxation of Tomsk region
+# descr: 55, Frunze pr., Tomsk, Russia
+# descr: RTCOMM-RU
+
+# name: Центр специальной связи и информации ФСБ в Перми
+netname: RT-CLNT-CPS2
+# descr: Centre of Special Communication and Information of the Federal Security Service of the Russian Federation in the Perm region
+# descr: 614000,12 25 Oktyabrya str, Perm
+# descr: CPS Perm
+
+# name: МЧС
+netname: COMCOR-FGUPMChSRossii
+# descr: Network for FGUP MChS Rossii
+# descr: comcor.ru
+
+# name: ГлавНИВЦ управления делами Президента
+netname: GLAVNIVZ
+# descr: FSUE "GlavNIVZ"
+# descr: FSUE "GlavNIVZ"
+
+# name: МВД
+netname: MOIA-NET
+# descr: Ministry of Interior Affairs of Russian Federation
+# descr: Network of Ministry of Interior Affairs RF
+# descr: Ministry of Interior Affairs RF
+
+# name: Мордовская ФНС
+netname: UMNS-MORDOVIA
+# descr: Ministry of Taxation, subsidiary of Morodovia region
+# descr: Saransk, 430000
+# descr: RTCOMM-RU
+
+# name: Центральная поликлиника ФСКН
+netname: MTU-CUST-D8D9FB95
+# descr: GU "Centralnaja poliklinika" FSKN Rossii
+# descr: ZAO MTU-Intel's Moscow Region Network
+# descr: ZAO MTU-Intel
+# descr: Moscow, Russia
+
+# name: ФАПРИД
+netname: ZEN-CUST-FAPRID
+# descr: Federal agency for legal protection
+# descr: of molitary, special and dual use
+# descr: intellectual activity results under
+# descr: Ministry of justice of the Russian
+# descr: federation country
+# descr: ZENON N.S.P.
+# descr: 1-ja Jamskogo polia 19
+# descr: Moscow, Russia
+
+# name: Кировская ФНС
+netname: RU-KIROV-NALOG
+# descr: The Ministry of Taxation of the Russian Federation in Kirov
+# descr: Russia, Kirov
+# descr: Vorovsckogo 37
+# descr: RTCOMM-RU
+
+# name: Приволжская ФНС
+netname: RU-PRIVOL-NALOG
+# descr: The Ministry of Taxation of the Russian Federation in Privoljskii Federal region
+# descr: Russia, N.Novgorod
+# descr: Alekseevskaya, 26
+# descr: RTCOMM-RU
+
+# name: Казначейство Северной Осетии-Алании
+netname: TREASURY-VLADIKAVKAZ
+# descr: Department of Federal Treasury of Russian Ministry of Finance,
+# descr: Republic North Ossetia-Alania, 362008, Vladikavkaz, yl. Kotzoeva, 24
+# descr: RTCOMM-RU
+
+# name: Ростовский минфин
+netname: MINFIN-RND-NET
+# descr: The Financial ministry of Rostov region
+# descr: RTCOMM-RU
+
+# name: Липецкая дума
+netname: LIP-OBLSOVET-1-NET
+# descr: Lipetsk Regional Duma
+# descr: Lipetsk Regional Public Network Route N4
+
+# name: Пермский МЧС
+netname: Ten_OTRYAD-MCHS
+# descr: 10 Otryad MCHS Perm region network, Perm, Russia
+# descr: RU-PERMONLINE block
+# descr: Uralcom Ltd, Perm
+
+# name: ФСК ЕЭС
+netname: FSK-ESS-OJSC-NET
+# descr: FSK EES OJSC
+# descr: 512 PI
+
+# name: Алтайский ФСКН
+netname: FSKN_Rossii_RU_po_Altajskomu_kraju
+# descr: Ticket 10-23105-2
+# descr: ROSTELECOM NETS
+
+# name: Воронежская дума
+netname: VRNOBLDUMA-NET
+# descr: Oblastnaya duma
+# descr: Voronezh
+# descr: "Informsvyaz-Chernozemye"
+# descr: 35, Revolutsii prosp.
+# descr: Voronezh,394000
+# descr: Russia
+
+# name: Карельская ФНС
+netname: UMNS-KARELIA
+# descr: Ministry of Taxation, subsidiary of Republic of Karelia
+# descr: Petrozavodsk, Russia
+# descr: RTCOMM-RU
+
+# name: Хабаровский ФСКН
+netname: FSKN_RF__Khabarovsk
+# descr: Ticket 10-21819-1
+# descr: ROSTELECOM NETS
+
+# name: Читинский ФСКН
+netname: FSKN
+# descr: JSC Rostelecom Client (city Chita)
+# descr: ROSTELECOM NETS
+
+# name: Ханты-Мансийский ФНС
+netname: MNSHMAO
+# descr: Management of the Russian Federation
+# descr: Tax and Duty Ministry in Khanty- Mansiysk autonomous region
+# descr: Hanty-Mansiysk, Russia
+# descr: KHMOD Autonomous System
+
+# name: Тюменская ФНС
+netname: UMNS-TUMEN
+# descr: Ministry of Taxation, subsidiary of Tyumen region
+# descr: 625000, Tyumen, Tovarnoe Chosse str., 15
+# descr: RTCOMM-RU
+
+# name: Самарская ФНС
+netname: UMNS-SAMARA
+# descr: Ministry of Taxation, subsidiary of Samara region
+# descr: 9, Tsiolkovskogo st.,
+# descr: Samara, 443002
+# descr: RTCOMM-RU
+
+# name: Министерство культуры
+netname: GIVC
+# descr: FSUE the Main information computer center
+# descr: of the Ministry of culture of the Russian Federation
+# descr: FSUE the Main information computer center of the
+# descr: Ministry of culture of the Russian Federation
+
+# name: Спецстрой ФСБ
+netname: MTU-CUST-D10EF4E3
+# descr: FGUP Upravlenie specialnogo stroitelstva FSB RF
+# descr: ZAO MTU-Intel's Moscow Region Network
+# descr: ZAO MTU-Intel
+# descr: Moscow, Russia
+
+# name: Самарская дума
+netname: SAMARA-TTK-NET-12S0348
+
+# name: Магаданская дума
+netname: RU-ARBUZ-MAGGORDUMA-NET
+# descr: The Magadan municipal duma
+# descr: Russia, 685000, Magadan, 1 Gorkogo str.
+# descr: ARBUZ LIR route
+# descr: ARBUZ Co. Ltd.
+# descr: 16 Pushkina str., #116-A
+# descr: 685000
+# descr: Magadan
+# descr: Russian Federation
+# descr: 74132622138
+# descr: 74132628663
+
+# name: Майкопская ФНС
+netname: UMNS-MAYKOP
+# descr: Ministry of Taxation of Maykop region
+# descr: Privokzalnaya, 331
+# descr: RTCOMM-RU
+
+# name: Оренбугрская ФНС
+netname: UMNS-ORENBURG
+# descr: Ministry of Taxation, subsidiary of Orenburg region
+# descr: 11a, 60 let Oktyabrya st.,
+# descr: Orenburg, 460021
+# descr: RTCOMM-RU
+
+# name: Министерство образования
+netname: MON-RUNNET
+# descr: The Ministry of Education and Sciences of the Russian Federation
+# descr: Moscow, Russia
+# descr: RUNNet
+# descr: Russian Federal University Network
+
+# name: Министерство финансов
+netname: MINFINPI-NET
+# descr: Ministry of Finance of the Russian Federation
+# descr: MINFIN
+
+# name: Барнаульский ФСИН
+netname: barnaul-fsin-su
+# descr: penal system
+
+# name: ФКУ УАТ ФСИН
+netname: COMCOR-FKU-UAT-FSIN-Rossii
+# descr: Network for FKU UAT FSIN Rossii
+
+# name: Следственный изолятор №3, Череповец
+netname: SLED-IZOLYATOR-FSIN-LAN
+# descr: CHER,Severnoe,67B
+# descr: North-West Region
+# descr: North-West Branch of OJSC MegaFon Network, Fixed broadband
+
+# name: Роспатент
+netname: ROSPAT
+# descr: Russian Patent include All Russian scientific
+# descr: and research institute of state patent
+# descr: examination and nd All Russian patent library
+# descr: and Publish Firm "Patent"
+
+# name: Пермский Роспотребнадзор
+netname: ROS-POTREB-NADZOR
+# descr: Control Rospotrebnadzor on Perm region, Russia
+# descr: 78, October str., Vereshchagino
+
+# name: Каменск-Шахтинский Роспотребнадзор
+netname: ROSPOTREBNADZOR-KSHAXTINSK-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Kamensk-Shaxtinsk, Pushkina str., 79
+# descr: Kamensk-Shaxtinsk, Rostovskaia oblast, 347810
+
+# name: Азовский Роспотребнадзор
+netname: ROSPOTREBNADZOR-AZOV-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Azov, Izmailova str., 60
+# descr: Azov, Rostovskaia oblast, 346780
+
+# name: Роспотребнадзор Белая Калитва
+netname: ROSPOTREBNADZOR-BKALITVA-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Belaja Kalitva, Kommunisticheskaja str., 23a
+# descr: Belaja Kalitva, Rostovskaia oblast, 347042
+
+# name: Новочеркасский Роспотребнадзор
+netname: ROSPOTREBNADZOR-NOVOCHERKASSK-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Novocerkassk, Yannatova str., 3
+# descr: Novocerkassk, Rostovskaia oblast, 347810
+
+# name: Волгодонский Роспотребнадзор
+netname: ROSPOTREBNADZOR-VOLGODONSK-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Volgodonsk, Lenina str., 74
+# descr: Volgodonsk, Rostovskaia oblast, 347360
+# descr: Routing object of
+# descr: Division of JSC "UTK" "Rostovelectrosviaz" and its deport
+
+# name: Роспотребнадзор Орловка
+netname: ROSPOTREBNADZOR-ORLOVKA-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Orlovka, Pionerskaya str., 63a
+# descr: Orlovka, Rostovskaia oblast, 346500
+# descr: Routing object of
+# descr: Division of JSC "UTK" "Rostovelectrosviaz" and its deport
+
+# name: Сальский Роспотребнадзор
+netname: ROSPOTREBNADZOR-SALSK-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Salsk, Ostrovskogo str., 3
+# descr: Salsk, Rostovskaia oblast, 347636
+# descr: Routing object of
+# descr: Division of JSC "UTK" "Rostovelectrosviaz" and its deport
+
+# name: Вешкинский Роспотребнадзор
+netname: ROSPOTREBNADZOR-VESHKI-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Veshenskaja, Budenovskia str., 13
+# descr: Veshenskaja, Rostovskaia oblast, 346270
+# descr: Routing object of
+# descr: Division of JSC "UTK" "Rostovelectrosviaz" and its deport
+
+# name: Миллеровский Роспотребнадзор
+netname: ROSPOTREBNADZOR-MILLEROVO-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Millerovo, Telmana str., 30
+# descr: Millerovo, Rostovskaia oblast, 346130
+# descr: Routing object of
+# descr: Division of JSC "UTK" "Rostovelectrosviaz" and its deport
+
+# name: Цимлянский Роспотребнадзор
+netname: ROSPOTREBNADZOR-CIMLYANSK-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Cimlyansk, Naberzhnaja str., 14
+# descr: Cimlyansk, Rostovskaia oblast, 347042
+# descr: Routing object of
+# descr: Division of JSC "UTK" "Rostovelectrosviaz" and its deport
+
+# name: Шахтинский Роспотребнадзор
+netname: ROSPOTREBNADZOR-SHAXTU-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Shaxtu, Shevchenko str., 153
+# descr: Shaxtu, Rostovskaia oblast, 346500
+# descr: Routing object of
+# descr: Division of JSC "UTK" "Rostovelectrosviaz" and its deport
+
+# name: Ростовский Роспотребнадзор
+netname: ROSPOTREBNADZOR-ROSTOV-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Rostov, Serjantova str., 3a
+# descr: Rostov, Rostovskaia oblast, 344029
+# descr: Routing object of
+# descr: Division of JSC "UTK" "Rostovelectrosviaz" and its deport
+
+# name: Таганрогский Роспотребнадзор
+netname: ROSPOTREBNADZOR-TAGANROG-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Taganrog, Bolshoi prospect str., 16a
+# descr: Taganrog, Rostovskaia oblast, 347930
+# descr: Routing object of
+# descr: Division of JSC "UTK" "Rostovelectrosviaz" and its deport
+
+# name: Рязанский Роспотребнадзор
+netname: Rospotrebnadzor_Ryazan
+# descr: Ticket 09-20598-1, RISS 11533, CF
+# descr: ROSTELECOM NETS
+
+# name: Роспотребнадзор по ЖД
+netname: Rospotrebnadzor-ru-net
+# descr: pravlenie Rospotrebnadzora po zheleznodorozhnomu transport
+# descr: Moscow, Russia
+# descr: NewCom Port route block
+
+# name: Владимирский Роспотребнадзор
+netname: RPN33
+# descr: RosPotrebNadzor, Vladimir
+# descr: ELCOM ISP
+
+# name: Таганрогский Роспотребнадзор
+netname: ROSPOTREBNADZOR-TAGANROG-NET
+# descr: Territorial Administration of Federal
+# descr: Service of Control in Sphere of Defence
+# descr: Protection of Consumer's Right and Welfare of Person RO
+# descr: Taganrog, Bolshoi prospect str., 16a
+# descr: Taganrog, Rostovskaia oblast, 347930
+# descr: Routing object of
+# descr: Division of JSC "UTK" "Rostovelectrosviaz" and its deport
+
+# name: Ангарский Роспотребнадзор
+netname: VLG-RPN-Angarsky-2
+# descr: Volgograd Rospotrebnadzor on Angarsky
+# descr: Unico network
+
+# name: ЦНИИЭ
+netname: TNTrade-NET
+# descr: Federal Budget Institution of Science "Central Scientific and Research Institute of Epidemiology of Rospotrebnadzor"
+# descr: COMSTAR Telecommunications
+# descr: RUSSIA
+
+# name: Камчатский Роспотребнадзор
+netname: Rospotrebnadzor-Kam
+# descr: Rospotrebnadzor-Kam
+# descr: OJSC Rostelecom
+# descr: Kamchatka branch
+
+# name: Нижегородский Роспотребнадзор
+netname: Rospotrebnadzor-NET
+# descr: Personal network for
+# descr: Upravlenie Rospotrabnadzora po Nizhegorodskoy obl.
+# descr: About abuse activity please
+# descr: e-mail to abuse@nnov.vt.ru
+# descr: OJSC VolgaTelecom Autonomous System
+
+# name: Роспотребнадзор
+
+# name: Приморская прокуратура
+netname: POL-PROSECUTORS-NET
+# descr: Prosecutor's Office of the Primorsky region
+# descr: PRIMORYE NET
+
+# name: Дальневосточная прокуратура
+netname: KHT-GEN-PROCURATURA
+# descr: Department of the State Office of Public Prosecutor of the Russian Federation in Far East Federal District
+# descr: KHT_RU
+
+# name: ММТП
+netname: WESTCALL-CUST-MITPO
+# descr: Moscow interregional transport prosecutor's office
+# descr: Moscow, Russia
+# descr: WestCall Ltd
+
+# name: Министерство Юстиции (МинЮст), minjust.ru
+netname: COMCOR-MinYustRegionKom
+# descr: Network for "MinYust"(RegionKom)
+# origin: AS8732
+
+# name: "Смольный" (основная подсеть)
+netname: RU-METROCOM-2011011701
+# descr: CJSC "Metrocom"
+# descr: 29 Odoevskogo Str.
+# descr: 199155, St.Petersburg,Russia
+# origin: AS6850
+
+# name: "Смольный" (запасная подсеть)
+netname: ATS-SMOLNOGO-LAN
+# descr: ATS Smolnogo
+# descr: St.Petersburg
+# descr: JSC PeterStar
+# origin: AS20632
+
+# name: Единая Государственная система управления и передачи данных (ЕГСУПД)
+netname: EGSUPD-NET
+# descr: Federal State Institution "United State System
+# descr: of Data Transfering Management"
+# descr: 19, Trubnikovsky per., 123995, Moscow, Russian Federation
+
+
+
+###############################################################################
+## Прокремлёвские СМИ ##
+###############################################################################
+
+# name: ВГТРК
+netname: VGTRK-ITD
+netname: RU-VGTRK-20020919
+# descr: Federal State Unitary Enterprise Russian State Television and Radio Broadcasting Company
+# descr: IT Department
+# descr: VGTRK
+# descr: Moscow, Russia
+# descr: VGTRK ITD
+# origin: AS25292
+# origin: AS57767
+
+# name: ОРТ
+netname: ORTNET
+# descr: Russian Public Television
+# origin: AS6854
+
+# name: НТВ
+netname: NTV-net
+# descr: OJSC Televison Company NTV
+# origin: AS41681
+## (!!) mnt-by: ROSNIIROS-MNT
+
+# name: РИА "НОВОСТИ"
+netname: RIAN-NETWORK-MH
+# descr: The Federal State Unitary Enterprise Russian Agency of the International Information RIA Novosti
+# origin: AS44479
+
+# name: Life.RU
+netname: NewsMediaRus
+# descr: OOO News Media-Rus
+# descr: www.life.ru
+# origin: AS31261
+
+
+####################### НЕГОСУДАРСТВЕННЫЕ КОМПАНИИ ###########################
+## Некоторые хостинговые компании безвозмездно предоставляют ресурсы для ##
+## госструктур. ##
+###############################################################################
+
+# name: Гиббд gibdd.ru, региональные Роспотребнадзора 77.rospotrebnadzor.ru
+netname: RU-DATALOGIKA
+# descr: Datalogika JSC
+# origin: AS43146
+
+# name: подразделение К (kguvd.ru)
+netname: BEST-HOSTER-NET
+# descr: Best-Hoster Group Co. Ltd.
+# origin: AS49693
+
+# name: Роспотребнадзор rospotrebnadzor.ru
+netname: ONLANTA-NET
+# descr: Onlanta Ltd.
+# origin: AS56631
+
+# name: МВД (mvd.ru)
+netname: RU-RUSCOMNET-20030515
+# descr: RusComNet Ltd.
+# origin: AS21414
+
+
+###############################
+######### РКН-related #########
+###############################
+
+netname: RU-RTK-20070321
+# org: ORG-JR8-RIPE
+# descr: NCNET
+# origin: AS42610
+
+# name: server referenced as "oldip" in DNS of 1whois
+netname: STARNET-VPN
+# descr: ISP "Starnet" - Home LAN's in Moscow
+# origin: AS33902
+
+###############################
+###############################
+
+############################## Копирасты ##################################
+## Вообще, нижний раздел имеет смысл вынести в отдельный репозиторий с ##
+## подсетями копирастов и прочих врагов рода человеческого, но если никто ##
+## не возражает - пусть пока "поживут" тут. Если что - issues к вашим услугам #
+###############################################################################
+
+# name: федерация защиты правообладателей fzpr.ru
+netname: CCC-HC
+# descr: Garant-Park-Telecom, Ltd.
+# origin: AS41126
+
+# name: российский союз правообладателей rp-union.ru
+netname: RU-GARSTELECOM-20090925
+# descr: GARS Telecom - Telecommunications Management LLC
+# origin: AS31261
+
+# name: Защита правообладателей copyright.ru
+netname: RU-NIC-HOSTING
+# descr: RU-NIC is a hosting and technical support organization.
+# origin: AS25535
+

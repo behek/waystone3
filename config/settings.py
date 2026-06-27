@@ -1,5 +1,7 @@
 import os
 
+_BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 DB = {
     "host":     os.getenv("PG_HOST", "127.0.0.1"),
     "port":     int(os.getenv("PG_PORT", "5434")),
@@ -11,8 +13,9 @@ DB = {
 TG_TOKEN = os.getenv("TG_TOKEN", "")
 TG_CHAT  = os.getenv("TG_CHAT",  "")
 
-BLACKLISTS_DIR  = os.getenv("BLACKLISTS_DIR", "/home/mcp/blacklists/AS_Network_List")
-BIRD_PROTOCOLS  = os.getenv("BIRD_PROTOCOLS", "/etc/bird/protocols")
+LISTS_DIR       = os.getenv("LISTS_DIR",       os.path.join(_BASE_DIR, "lists"))
+BLACKLISTS_DIR  = os.getenv("BLACKLISTS_DIR",  "/home/mcp/blacklists/AS_Network_List")
+BIRD_PROTOCOLS  = os.getenv("BIRD_PROTOCOLS",  "/etc/bird/protocols")
 BIRD_BACKUP_DIR = os.getenv("BIRD_BACKUP_DIR", "/etc/bird/backups")
 MMDB_PATH       = os.getenv("MMDB_PATH",       "/home/mcp/dbip-country.mmdb")
 BIRDC_SOCKET    = os.getenv("BIRDC_SOCKET",    "/run/bird/bird.ctl")
@@ -42,5 +45,5 @@ SOURCES = {
     "vk":         {"type": "asn_file", "file": "vk.txt"},
     "vodafone":   {"type": "asn_file", "file": "vodafone.txt"},
     "rkn":        {"type": "url",     "url": RKN_URL},
-    "ru_gov":     {"type": "netname_file", "file": "/home/mcp/blacklists/AS_Network_List/lists/ru-gov-netnames.txt"},
+    "ru_gov":     {"type": "netname_file", "file": "ru-gov-netnames.txt"},
 }

@@ -1,6 +1,6 @@
 import os, re, subprocess, sys
 import requests
-from config.settings import BLACKLISTS_DIR, RKN_URL, RU_GOV_URL
+from config.settings import LISTS_DIR, BLACKLISTS_DIR, RKN_URL, RU_GOV_URL
 
 AS_RE   = re.compile(r'\bAS\d+\b', re.IGNORECASE)
 CIDR_RE = re.compile(r'^\d{1,3}(?:\.\d{1,3}){3}/\d{1,2}$')
@@ -18,7 +18,7 @@ def _run(args, cwd, timeout=120):
 
 
 def fetch_from_asn_file(name, filename):
-    path = os.path.join(BLACKLISTS_DIR, 'lists', filename)
+    path = os.path.join(LISTS_DIR, filename)
     if not os.path.exists(path):
         raise FileNotFoundError(f'Not found: {path}')
     prefixes = set()
@@ -60,12 +60,13 @@ def fetch_list(name, cfg):
     raise ValueError(f'Unknown type: {t}')
 
 
-def fetch_ru_gov_local(filepath):
+def fetch_ru_gov_local(filename):
     """
     Читает локальный файл с netnames, ищет префиксы через RIPE REST API.
     Не использует whois порт 43.
     """
     import re
+    filepath = os.path.join(LISTS_DIR, filename)
     netnames = []
     with open(filepath) as f:
         for line in f:
