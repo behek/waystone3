@@ -1,0 +1,19 @@
+[Unit]
+Description=Bird Updater Telegram Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=mcp
+WorkingDirectory=/home/mcp/bird-updater
+EnvironmentFile=/home/mcp/bird-updater/systemd/bird-updater.env
+ExecStart=/usr/bin/python3 bot.py
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=bird-bot
+
+[Install]
+WantedBy=multi-user.target

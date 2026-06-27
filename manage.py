@@ -62,7 +62,7 @@ def add_vendor(name, community, file, label):
         print(f"[settings] '{name}' already exists, skipped")
 
     print(f"\nГотово! Теперь:")
-    print(f"  1. Создай файл: ~/blacklists/AS_Network_List/lists/{file}")
+    print(f"  1. Создай файл: lists/{file}")
     print(f"  2. Запусти:     python3 updater.py --list {name}")
 
 
