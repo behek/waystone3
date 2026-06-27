@@ -1,6 +1,7 @@
 import os, re, subprocess, sys
 import requests
 from config.settings import LISTS_DIR, RKN_URL, RU_GOV_URL
+from pylib.ip import convert_to_cidr
 
 _PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -63,11 +64,6 @@ def fetch_list(name, cfg):
 
 
 def fetch_ru_gov_local(filename):
-    """
-    Читает локальный файл с netnames, ищет префиксы через RIPE REST API.
-    Не использует whois порт 43.
-    """
-    import re
     filepath = os.path.join(LISTS_DIR, filename)
     netnames = []
     with open(filepath) as f:
@@ -80,18 +76,23 @@ def fetch_ru_gov_local(filename):
     prefixes = set()
     for netname in netnames:
         try:
-            url = f'https://rest.db.ripe.net/search.json?query-string={netname}&type-filter=route&flags=no-referenced'
+            url = f'https://rest.db.ripe.net/search.json?query-string={netname}&flags=no-referenced'
             r = requests.get(url, timeout=15, headers={'Accept': 'application/json'})
-            if r.status_code != 200:
+            if r.status_code not in (200, 400):
                 continue
             data = r.json()
-            objects = data.get('objects', {}).get('object', [])
-            for obj in objects:
-                for attr in obj.get('attributes', {}).get('attribute', []):
-                    if attr.get('name') == 'route':
-                        p = attr.get('value', '').strip()
-                        if _is_ipv4(p):
-                            prefixes.add(p)
+            for obj in data.get('objects', {}).get('object', []):
+                if obj.get('type') != 'inetnum':
+                    continue
+                pk = obj.get('primary-key', {}).get('attribute', [{}])[0].get('value', '')
+                if ' - ' not in pk:
+                    continue
+                try:
+                    for cidr in convert_to_cidr(pk):
+                        if _is_ipv4(cidr):
+                            prefixes.add(cidr)
+                except Exception:
+                    pass
         except Exception as e:
             print(f'  [ru_gov] {netname}: {e}', file=sys.stderr)
 
