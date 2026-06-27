@@ -1,4 +1,4 @@
-import os, re, subprocess, sys
+import os, re, subprocess, sys, time
 import requests
 from config.settings import LISTS_DIR, RKN_URL, RU_GOV_URL
 from pylib.ip import convert_to_cidr
@@ -31,11 +31,16 @@ def fetch_from_asn_file(name, filename):
         m = AS_RE.search(line)
         if m:
             asn = m.group(0).upper()
-            try:
-                out = _run([sys.executable, 'network_list_from_as.py', '-q', asn], _PROJECT_ROOT)
-                prefixes.update(p.strip() for p in out.splitlines() if _is_ipv4(p.strip()))
-            except Exception as e:
-                print(f'  [warn] {asn}: {e}', file=sys.stderr)
+            for attempt in range(3):
+                try:
+                    out = _run([sys.executable, 'network_list_from_as.py', '-q', asn], _PROJECT_ROOT)
+                    prefixes.update(p.strip() for p in out.splitlines() if _is_ipv4(p.strip()))
+                    break
+                except Exception as e:
+                    if attempt < 2:
+                        time.sleep(5 * (attempt + 1))
+                    else:
+                        print(f'  [warn] {asn}: {e}', file=sys.stderr)
         elif _is_ipv4(line):
             prefixes.add(line)
     return prefixes
