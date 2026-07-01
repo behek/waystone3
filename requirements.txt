@@ -4,3 +4,4 @@ netaddr>=1.2
 geoip2>=4.7
 cymruwhois>=1.6
 pycountry>=24.6
+pycountry>=24.6
