@@ -35,15 +35,21 @@ CREATE TABLE IF NOT EXISTS bl_update_log (
     error_msg   TEXT
 );
 INSERT INTO bl_lists (name, label, community) VALUES
-    ('telegram','Telegram',250),('whatsapp','WhatsApp',251),
-    ('vmware','VMware',252),('intel','Intel',253),
-    ('chatgpt','ChatGPT',260),('claude','Claude',261),
-    ('cdn77','CDN77',262),('plex','Plex',263),
-    ('gcore','GCore',264),('qrator','Qrator',270),
-    ('t1cloud','T1 Cloud',271),('akamai','Akamai',277),
-    ('microsoft','Microsoft',280),('nvidia','NVIDIA',281),
-    ('docker','Docker',282),('aws','AWS',283),
-    ('cloudflare','Cloudflare',284),('yandex','Yandex',285),
-    ('meta','Meta',245),('google','Google',246),
-    ('rkn','RKN AntiFilter',777),('ru_gov','RU-GOV',900)
+    ('telegram',   'Telegram',       250),
+    ('vmware',     'VMware',         252),
+    ('intel',      'Intel',          253),
+    ('chatgpt',    'ChatGPT',        260),
+    ('cdn77',      'CDN77',          262),
+    ('qrator',     'Qrator',         270),
+    ('t1cloud',    'T1 Cloud',       271),
+    ('akamai',     'Akamai',         277),
+    ('microsoft',  'Microsoft',      280),
+    ('nvidia',     'NVIDIA',         281),
+    ('aws',        'AWS',            283),
+    ('cloudflare', 'Cloudflare',     284),
+    ('yandex',     'Yandex',         285),
+    ('meta',       'Meta',           245),
+    ('google',     'Google',         246),
+    ('rkn',        'RKN AntiFilter', 777),
+    ('ru_gov',     'RU-GOV',         900)
 ON CONFLICT (name) DO UPDATE SET label=EXCLUDED.label, community=EXCLUDED.community;
